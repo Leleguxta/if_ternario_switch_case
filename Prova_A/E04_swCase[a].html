@@ -12,11 +12,26 @@
     //DICA: Use L para laranja, K para kiwi, M para melancia
 
     //ENTRADA
-
+    const fruta = prompt(`Escolha uma fruta \n L = laranja K = kiwi M = melancia`).toUpperCase();
+    let resposta;
 
     //PROCESSAMENTO
-
+    switch (fruta) {
+        case "L":
+            resposta = "A laranja está em falta";
+        break;
+        case "K":
+            resposta = "O kiwi está acabando";
+        break;
+        case "M":
+            resposta = "O quilo da melancia é R$ 3,00";
+        break;
+        default:
+            resposta = "Opção de fruta inválida";
+        break;
+    }
 
     //SAÍDA
+    document.write(resposta)
 
 </script>

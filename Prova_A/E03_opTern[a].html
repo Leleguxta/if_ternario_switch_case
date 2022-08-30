@@ -11,11 +11,20 @@
     //Calcule os pontos e apresente o nível de complexidade do programa
 
     //ENTRADA
-
+    const linha = Number(prompt("Quantas linhas o programa possui: "));
+    const ifelse = Number(prompt("Quantos if-else o programa possui: "));
+    const ifternário = Number(prompt("Quantos if-ternarios o programa possui: "));
+    const total1 = ifelse * 2;
+    const total2 = ifternário * 3;
+    const final = total1 + total2 + linha;
+    let resposta;
 
     //PROCESSAMENTO
-
+    (final <= 25) ? resposta = "Considerado de nivel CALOURO" 
+    : (final > 25) ? resposta = "Considerado de nivel VETERANO" 
+    : resposta = "Algo de errado";
 
     //SAÍDA
+    document.write(resposta);
 
 </script>

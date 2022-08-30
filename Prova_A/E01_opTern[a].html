@@ -10,11 +10,23 @@
     //Apresente o valor final do veículo, considerando o juro estabelecido para a quantidade de parcelas.
 
     //ENTRADA
-
+    const veiculo = Number(prompt("Valor do veiculo: "));
+    const parcela = Number(prompt("Quantas Parcelas: "));
+    const juros = veiculo * 0.05;
+    const juros2 = veiculo * 0.1;
+    const juros3 = veiculo * 0.2;
+    const total1 = veiculo + juros;
+    const total2 = veiculo + juros2;
+    const total3 = veiculo + juros3;
+    let resposta;
 
     //PROCESSAMENTO
-
+    (parcela <= 12) ? resposta = `O veiculo vai custar R$${total1}` 
+    : (parcela <= 24) ? resposta = `O veiculo vai custar R$${total2}` 
+    : (parcela > 24) ? resposta = `O veiculo vai custar R$${total3}`
+    : resposta = "Algo de errado";
 
     //SAÍDA
+    document.write(resposta);
 
 </script>

@@ -10,11 +10,33 @@
     //Calcule e apresente o preço final da venda de acordo com o Tipo do Cliente
 
     //ENTRADA
-
+    const valortotal = Number(prompt("Valor total da venda: "));
+    const cliente = Number(prompt(`Tipo do cliente \n Comum = 1 VIP = 2 Funcionário = 3`));
+    const valor1 = valortotal * (1/100);
+    const valor2 = valortotal * (5/100);
+    const valor3 = valortotal * (10/100);
+    const final1 = valortotal - valor1;
+    const final2 = valortotal - valor2;
+    const final3 = valortotal - valor3;
+    let resposta;
 
     //PROCESSAMENTO
-
+    switch (cliente) {
+        case 1:
+            resposta = `O custo da venda vai ser de R$${final1}`;  
+        break;
+        case 2:
+            resposta = `O custo da venda vai ser de R$${final2}`;
+        break;
+        case 3:
+            resposta = `O custo da venda vai ser de R$${final3}`;
+        break;
+        default:
+            resposta = "Algo de errado";
+        break;
+    }
 
     //SAÍDA
+    document.write(resposta);
 
 </script>

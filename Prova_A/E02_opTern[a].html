@@ -9,11 +9,19 @@
     //Apresente a situação final do aluno
 
     //ENTRADA
-
+    const nt1 = Number(prompt("Nota do primeiro trimestre: "));
+    const nt2 = Number(prompt("Nota do segundo trimestre: "));
+    const nt3 = Number(prompt("Nota do terceiro trimestre: "));
+    const total = nt1 + nt2 + nt3;
+    let resposta;
 
     //PROCESSAMENTO
-
+    (total <= 12) ? resposta = "O aluno esta REPROVADO" 
+    : (total <= 18) ? resposta = "O aluno esta EXAME" 
+    : (total > 18) ? resposta = "O aluno esta APROVADO" 
+    : resposta = "Algo de errado";
 
     //SAÍDA
+    document.write(resposta);
 
 </script>
